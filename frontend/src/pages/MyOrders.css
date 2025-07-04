@@ -1,25 +1,46 @@
  /* MyOrders.css */
 .myorders-list {
-    padding: 2rem 0;
+    padding: 2.5rem 0;
+    max-width: 900px;
+    margin: 0 auto;
   }
   .myorders-list h2 {
     color: #0097e6;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
   .order-card {
     background: #e6f7ff;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    border-radius: 12px;
+    padding: 2rem 2rem 1.5rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 16px rgba(0,151,230,0.10);
+    transition: box-shadow 0.2s;
+  }
+  .order-card:hover {
+    box-shadow: 0 8px 32px rgba(0,151,230,0.18);
   }
   .order-card h3 {
     color: #0097e6;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
+    font-size: 1.3rem;
   }
   .order-card ul {
     margin: 0.5rem 0 0 1.5rem;
   }
   .order-card p {
     margin: 0.5rem 0;
+    color: #333;
+    font-size: 1.08rem;
+  }
+  .order-status {
+    font-weight: bold;
+    color: #0077b6;
+    margin-top: 0.7rem;
   }

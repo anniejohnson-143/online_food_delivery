@@ -1,20 +1,70 @@
 /* Register.css */
+.register-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(120deg, #f7faff 60%, #b2f7ef 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .register-form {
   max-width: 400px;
-  margin: 2rem auto;
-  background: #f7faff;
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  width: 100%;
+  background: #fff;
+  border-radius: 14px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  box-shadow: 0 4px 24px rgba(0, 119, 182, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 .register-form h2 {
   color: #0077b6;
   margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+.register-form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.register-form input, .register-form select {
+  padding: 0.7rem 1rem;
+  border: 1px solid #b2e0f7;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f7faff;
 }
 .register-form button {
   background: #0077b6;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1.08rem;
+  cursor: pointer;
   transition: background 0.2s;
+  margin-top: 0.5rem;
 }
 .register-form button:hover {
   background: #023e8a;
+}
+.register-msg {
+  color: #0077b6;
+  margin-top: 0.7rem;
+  font-size: 1.05rem;
+}
+.register-link {
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  color: #444;
+}
+.register-link a {
+  color: #0077b6;
+  text-decoration: underline;
+  margin-left: 0.3rem;
 } 

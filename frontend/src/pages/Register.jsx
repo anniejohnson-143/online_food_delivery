@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Register.css';
 export default function Register() {
   const [form, setForm] = useState({ name: '', email: '', password: '', role: 'user' });
@@ -25,19 +25,22 @@ export default function Register() {
   };
 
   return (
-    <div className="register-form">
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <input name="name" placeholder="Name" value={form.name} onChange={handleChange} required />
-        <input name="email" placeholder="Email" value={form.email} onChange={handleChange} required />
-        <input name="password" type="password" placeholder="Password" value={form.password} onChange={handleChange} required />
-        <select name="role" value={form.role} onChange={handleChange}>
-          <option value="user">User</option>
-          <option value="owner">Restaurant Owner</option>
-        </select>
-        <button type="submit">Register</button>
-      </form>
-      {msg && <p>{msg}</p>}
+    <div className="register-bg">
+      <div className="register-form">
+        <h2>Register</h2>
+        <form onSubmit={handleSubmit}>
+          <input name="name" placeholder="Name" value={form.name} onChange={handleChange} required />
+          <input name="email" placeholder="Email" value={form.email} onChange={handleChange} required />
+          <input name="password" type="password" placeholder="Password" value={form.password} onChange={handleChange} required />
+          <select name="role" value={form.role} onChange={handleChange}>
+            <option value="user">User</option>
+            <option value="owner">Restaurant Owner</option>
+          </select>
+          <button type="submit">Register</button>
+        </form>
+        {msg && <p className="register-msg">{msg}</p>}
+        <div className="register-link">Already have an account? <Link to="/login">Login</Link></div>
+      </div>
     </div>
   );
 } 

@@ -1,41 +1,64 @@
 /* RestaurantMenu.css */
-.menu-list {
-  padding: 2rem 0;
+.restaurant-menu {
+  padding: 2.5rem 0 0 0;
+  max-width: 900px;
+  margin: 0 auto;
 }
-.menu-list h2 {
+.restaurant-menu h2 {
   color: #ff9800;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  text-align: center;
 }
-.menu-item {
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-card {
   background: #fffbe7;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 10rem;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  border-radius: 12px;
+  padding: 2rem 2rem 1.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(255,152,0,0.10);
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s;
 }
-.menu-item img {
+.menu-card:hover {
+  box-shadow: 0 8px 32px rgba(255,152,0,0.18);
+}
+.menu-card h3 {
+  color: #ff9800;
+  margin-bottom: 0.7rem;
+  font-size: 1.3rem;
+}
+.menu-card img {
   border-radius: 8px;
   width: 100px;
   height: 100px;
   object-fit: cover;
   border: 2px solid #ff9800;
+  margin-bottom: 0.7rem;
 }
-.menu-item-details {
-  flex: 1;
+.menu-card button {
+  background: linear-gradient(90deg, #ff9800 0%, #ff6600 100%);
+  color: #fff;
+  margin-top: 0.7rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.13);
+  transition: background 0.2s, box-shadow 0.2s;
 }
-.menu-item-details h3 {
-  color: #ff9800;
-  margin-bottom: 0.5rem;
-}
-.menu-item-details label {
-  font-weight: 500;
-}
-.menu-item-details input[type='number'] {
-  width: 60px;
-  margin-left: 0.5rem;
+.menu-card button:hover {
+  background: linear-gradient(90deg, #ff6600 0%, #ff9800 100%);
+  box-shadow: 0 4px 16px rgba(255, 152, 0, 0.18);
 }
 .menu-total {
   font-size: 1.2rem;
@@ -54,4 +77,35 @@
 }
 .menu-list button:hover {
   background: #e65100;
+}
+.place-order-btn {
+  background: linear-gradient(90deg, #ff9800 0%, #ff6600 100%);
+  color: #fff;
+  margin: 1.5rem auto 0 auto;
+  display: block;
+  padding: 0.9rem 2.2rem;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 12px rgba(255, 152, 0, 0.18);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.place-order-btn:hover:enabled {
+  background: linear-gradient(90deg, #ff6600 0%, #ff9800 100%);
+  box-shadow: 0 4px 24px rgba(255, 152, 0, 0.22);
+}
+.place-order-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.menu-total-left {
+  font-size: 1.2rem;
+  color: #ff9800;
+  margin: 1.2rem 0 0 0;
+  text-align: left;
+  font-weight: bold;
+  letter-spacing: 1px;
 } 

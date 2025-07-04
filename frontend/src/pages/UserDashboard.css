@@ -9,3 +9,34 @@
   .user-dashboard h2 {
     color: #5f27cd;
   }
+
+.navbar {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #ffb347 0%, #ff5e62 100%) !important;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff !important;
+  font-weight: bold;
+  transition: color 0.3s, background 0.3s, box-shadow 0.2s;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  display: inline-block;
+  box-shadow: 0 0 0 rgba(255, 102, 0, 0);
+}
+
+.navbar a:hover, .navbar a.active {
+  color: #ff5e62 !important;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(255, 102, 0, 0.13);
+}

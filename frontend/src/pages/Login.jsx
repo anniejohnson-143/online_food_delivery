@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Login.css';
 export default function Login() {
   const [form, setForm] = useState({ email: '', password: '' });
@@ -28,14 +28,17 @@ export default function Login() {
   };
 
   return (
-    <div className="login-form">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input name="email" placeholder="Email" value={form.email} onChange={handleChange} required />
-        <input name="password" type="password" placeholder="Password" value={form.password} onChange={handleChange} required />
-        <button type="submit">Login</button>
-      </form>
-      {msg && <p>{msg}</p>}
+    <div className="login-bg">
+      <div className="login-form">
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit}>
+          <input name="email" placeholder="Email" value={form.email} onChange={handleChange} required />
+          <input name="password" type="password" placeholder="Password" value={form.password} onChange={handleChange} required />
+          <button type="submit">Login</button>
+        </form>
+        {msg && <p className="login-msg">{msg}</p>}
+        <div className="login-link">New to Savora? <Link to="/register">Register</Link></div>
+      </div>
     </div>
   );
 }

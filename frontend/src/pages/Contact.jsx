@@ -13,25 +13,29 @@ export default function Contact() {
         <Link to="/login">Login </Link>
         <Link to="/register">Register</Link>
       </nav>
-      <div className="contact-container">
-        <h2>Contact Us</h2>
-        <p>
-          Have questions, feedback, or need support? We'd love to hear from you!
-        </p>
-        <ul>
-          <li>Email: <a href="mailto:support@savora.com">support@savora.com</a></li>
-          <li>Phone: +1 (555) 123-4567</li>
-          <li>Address: 123 Flavor Street, Food City, Country</li>
-        </ul>
-        <p>
-          Or fill out the form below:
-        </p>
-        <form>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" required />
-          <button type="submit" disabled>Send (Demo Only)</button>
-        </form>
+      <div className="contact-fullwidth">
+        <div className="contact-flex">
+          <div className="contact-info-card">
+            <h2>Contact Us</h2>
+            <p>
+              Have questions, feedback, or need support? We'd love to hear from you!
+            </p>
+            <ul>
+              <li>Email: <a href="mailto:support@savora.com">support@savora.com</a></li>
+              <li>Phone: +1 (555) 123-4567</li>
+              <li>Address: 123 Flavor Street, Food City, Country</li>
+            </ul>
+          </div>
+          <div className="contact-form-card">
+            <h3>Send a Message</h3>
+            <form>
+              <input type="text" placeholder="Your Name" required />
+              <input type="email" placeholder="Your Email" required />
+              <textarea placeholder="Your Message" required />
+              <button type="submit" disabled>Contact Us</button>
+            </form>
+          </div>
+        </div>
       </div>
     </>
   );

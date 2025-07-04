@@ -39,7 +39,7 @@ export default function RestaurantList() {
       <ul className="list">
         {restaurants.length === 0 && !error && <li>No restaurants found.</li>}
         {restaurants.map(r => (
-          <li key={r._id}>
+          <li key={r._id} className="restaurant-card">
             <h3>{r.name}</h3>
             <p>{r.location}</p>
             <Link to={`/user/restaurant/${r._id}`}>

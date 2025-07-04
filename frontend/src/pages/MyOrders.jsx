@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './MyOrders.css';
 export default function MyOrders() {
   const [orders, setOrders] = useState([]);
@@ -47,26 +48,36 @@ export default function MyOrders() {
   });
 
   return (
-    <div className="myorders-list">
-      <h2>My Orders</h2>
-      <ul className="list">
-        {groupedOrders.map(order => (
-          <li key={order._id}>
-            <h3>Restaurant: {order.restaurant.name}</h3>
-            <p>
-              Items:
-              <ul>
-                {groupItems(order.items).map(item => (
-                  <li key={item._id}>
-                    {item.name} x {item.qty}
-                  </li>
-                ))}
-              </ul>
-            </p>
-            <p>Status: {order.status}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <nav className="navbar">
+        <div className="navbar-logo">SAVORA</div>
+        <div className="navbar-links">
+          <Link to="/user/restaurants">Restaurants</Link>
+          <Link to="/user/orders">My Orders</Link>
+          <Link to="/">Home</Link>
+        </div>
+      </nav>
+      <div className="myorders-list">
+        <h2>My Orders</h2>
+        <ul className="list">
+          {groupedOrders.map(order => (
+            <li key={order._id} className="order-card">
+              <h3>Restaurant: {order.restaurant.name}</h3>
+              <div>
+                <span>Items:</span>
+                <ul>
+                  {groupItems(order.items).map(item => (
+                    <li key={item._id}>
+                      {item.name} x {item.qty}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="order-status">Status: {order.status}</div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 }

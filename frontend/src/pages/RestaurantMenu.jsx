@@ -53,7 +53,7 @@ export default function RestaurantMenu() {
       <h2>Menu</h2>
       <ul className="list">
         {menu.map(item => (
-          <li key={item._id}>
+          <li key={item._id} className="menu-card">
             <h3>{item.name} - ${item.price}</h3>
             <p>{item.category} | {item.description}</p>
             {item.image && <img src={`http://localhost:5000/${item.image}`} alt={item.name} width="100" />}
@@ -73,8 +73,8 @@ export default function RestaurantMenu() {
           </li>
         ))}
       </ul>
-      <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
-      <button onClick={placeOrder} disabled={totalPrice === 0}>Place Order</button>
+      <h3 className="menu-total-left">Total Price: ${totalPrice.toFixed(2)}</h3>
+      <button className="place-order-btn" onClick={placeOrder} disabled={totalPrice === 0}>Place Order</button>
       {msg && <p>{msg}</p>}
     </div>
   );

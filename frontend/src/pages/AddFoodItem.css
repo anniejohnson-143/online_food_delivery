@@ -1,20 +1,50 @@
 /* AddFoodItem.css */
-.addfood-form {
+.addfooditem-container {
   max-width: 500px;
-  margin: 2rem auto;
+  margin: 2.5rem auto;
   background: #f1f8e9;
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  border-radius: 14px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  box-shadow: 0 4px 24px rgba(104, 159, 56, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.addfood-form h2 {
+.addfooditem-container h2 {
   color: #689f38;
   margin-bottom: 1.5rem;
+  font-size: 2rem;
 }
-.addfood-form button {
+.addfooditem-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.addfooditem-container input, .addfooditem-container textarea {
+  padding: 0.7rem 1rem;
+  border: 1px solid #b2dfdb;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f7faf7;
+}
+.addfooditem-container button {
   background: #689f38;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1.08rem;
+  cursor: pointer;
   transition: background 0.2s;
+  margin-top: 0.5rem;
 }
-.addfood-form button:hover {
+.addfooditem-container button:hover {
   background: #33691e;
+}
+.addfooditem-container p {
+  color: #33691e;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  text-align: center;
 } 

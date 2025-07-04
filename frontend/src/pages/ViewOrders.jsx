@@ -34,14 +34,31 @@ export default function ViewOrders() {
         ))}
       </select>
       <ul className="list">
-        {orders.map(order => (
-          <li key={order._id}>
-            <h3>User: {order.user.name}</h3>
-            <p>Items: {order.items.map(i => i.name).join(', ')}</p>
-            <p>Order Time: {new Date(order.orderTime).toLocaleString()}</p>
-            <p>Status: {order.status}</p>
-          </li>
-        ))}
+        {orders.map(order => {
+          // Group items by _id and count quantity
+          const itemMap = {};
+          order.items.forEach(item => {
+            if (itemMap[item._id]) {
+              itemMap[item._id].qty += 1;
+            } else {
+              itemMap[item._id] = { ...item, qty: 1 };
+            }
+          });
+          const groupedItems = Object.values(itemMap);
+          return (
+            <li key={order._id} className="vieworders-card">
+              <h3>User: {order.user.name}</h3>
+              <p>Items:</p>
+              <ul>
+                {groupedItems.map(item => (
+                  <li key={item._id}>{item.name} x {item.qty}</li>
+                ))}
+              </ul>
+              <p>Order Time: {new Date(order.orderTime).toLocaleString()}</p>
+              <p>Status: {order.status}</p>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

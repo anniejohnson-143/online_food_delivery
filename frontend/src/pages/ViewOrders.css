@@ -1,25 +1,53 @@
- /* ViewOrders.css */
+/* ViewOrders.css */
 .vieworders-list {
-    padding: 2rem 0;
-  }
-  .vieworders-list h2 {
-    color: #e17055;
-    margin-bottom: 1.5rem;
-  }
-  .vieworders-card {
-    background: #fff0e6;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
-  }
-  .vieworders-card h3 {
-    color: #e17055;
-    margin-bottom: 0.5rem;
-  }
-  .vieworders-card ul {
-    margin: 0.5rem 0 0 1.5rem;
-  }
-  .vieworders-card p {
-    margin: 0.5rem 0;
-  }
+  padding: 2.5rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.vieworders-list h2 {
+  color: #e17055;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  text-align: center;
+}
+.vieworders-list select {
+  padding: 0.7rem 1.1rem;
+  border-radius: 6px;
+  border: 1px solid #ffb199;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  background: #fff0e6;
+  color: #e17055;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(225, 112, 85, 0.07);
+  transition: border 0.2s;
+}
+.vieworders-list select:focus {
+  border: 1.5px solid #e17055;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.vieworders-card {
+  background: #fff0e6;
+  border-radius: 12px;
+  padding: 2rem 2rem 1.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(225, 112, 85, 0.10);
+  transition: box-shadow 0.2s;
+}
+.vieworders-card:hover {
+  box-shadow: 0 8px 32px rgba(225, 112, 85, 0.18);
+}
+.vieworders-card h3 {
+  color: #e17055;
+  margin-bottom: 0.7rem;
+  font-size: 1.3rem;
+}
+.vieworders-card p {
+  margin: 0.5rem 0;
+  color: #333;
+  font-size: 1.08rem;
+}
